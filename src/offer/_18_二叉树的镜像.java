@@ -16,7 +16,7 @@ public class _18_二叉树的镜像 {
         mirror(root.right);
     }
 
-    public class TreeNode {
+    private class TreeNode {
         int val = 0;
         TreeNode left = null;
         TreeNode right = null;
