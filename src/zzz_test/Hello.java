@@ -1,5 +1,6 @@
 package zzz_test;
 
+import com.sun.tools.javap.SourceWriter;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -13,32 +14,21 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Created by zzz_test.Poker on 2016/12/2.
+ * Created by zzz_test.Poker on 2016/12/2.,
  */
-public class Hello extends Application {
+public class Hello {
 
-    @Override
-    public void start(Stage primaryStage) throws Exception {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
-            }
-        });
-
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
-        Scene scene =  new Scene(root, 300, 250);
-
-        primaryStage.setTitle("Hello World!");
-        primaryStage.setScene(scene);
-        primaryStage.show();
-    }
 
     public static void main(String[] args) {
-        Button button = new Button();
+        String s = null;
+        switch (s) {
+            case "a":
+                System.out.println(s);
+                break;
+            default:
+                System.out.println("null");
+                break;
+        }
     }
 
     private static List<String> getContent(Map<String, List<String>> map) {

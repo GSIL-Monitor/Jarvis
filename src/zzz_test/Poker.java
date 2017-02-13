@@ -23,7 +23,12 @@ import java.util.concurrent.ForkJoinPool;
 public class Poker extends JFrame {
 
     public static void main(String[] args) throws Exception {
-        new Poker();
+        System.out.println(2.0f-1.9f);
+    }
+
+    private static long createPalindrom(long num) {
+        String str = num + new StringBuilder().append(num).reverse().toString();
+        return Long.parseLong(str);
     }
 
     public Poker() throws Exception{

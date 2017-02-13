@@ -1,5 +1,7 @@
 package zzz_test;
 
+import effective_java.ch2.NutritionFacts2;
+
 import java.util.Scanner;
 
 /**
@@ -7,6 +9,9 @@ import java.util.Scanner;
  */
 public class Test {
     public static void main(String[] args) {
+
+        NutritionFacts2 cocaCola = new NutritionFacts2.Builder(240, 0).calories(100).fat(150).build();
+
         while (true) {
             System.out.println("请输入一大于1的自然数");
             Scanner scanner = new Scanner(System.in);

@@ -1,4 +1,4 @@
-package heiheihei.w0082;
+package heiheihei.w0082_simple_operator;
 
 import java.util.Scanner;
 
