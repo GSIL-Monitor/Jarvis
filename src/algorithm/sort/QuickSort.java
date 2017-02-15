@@ -9,7 +9,7 @@ public class QuickSort {
 
     public static void sort(int[] nums) {
         sort(nums, 0, nums.length - 1);
-        System.out.println("Quick  Sort:---" + Arrays.toString(nums));
+        System.out.println("Quick  Sorting:---" + Arrays.toString(nums));
     }
 
     private static void sort(int[] nums, int startIndex, int endIndex) {

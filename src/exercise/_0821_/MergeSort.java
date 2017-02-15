@@ -1,7 +1,6 @@
 package exercise._0821_;
 
-import com.sun.media.sound.MidiInDeviceProvider;
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
 
@@ -11,7 +10,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        sort(NumsFactory.getDistinctRandNums(20, 100));
+        sort(NumFactory.getDistinctRandNums(20, 100));
     }
 
     public static void sort(int[] nums) {

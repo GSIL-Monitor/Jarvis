@@ -1,4 +1,4 @@
-package _02_singleton;
+package jianzhioffer._02_singleton;
 
 /**
  * Created by pokerface_lx on 16/8/5.

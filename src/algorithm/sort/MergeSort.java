@@ -14,7 +14,7 @@ public class MergeSort {
 
     public static void sort(int[] nums) {
         sort(nums, 0, nums.length - 1);
-        System.out.println("Merge  Sort:---" + Arrays.toString(nums));
+        System.out.println("Merge  Sorting:---" + Arrays.toString(nums));
     }
 
     private static void sort(int[] nums, int startIndex, int endIndex) {

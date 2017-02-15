@@ -10,7 +10,7 @@ public class HeapSort {
     public static void sort(int[] nums) {
         buildMaxHeap(nums);
         heapsort(nums);
-        System.out.println("Heap   Sort:---" + Arrays.toString(nums));
+        System.out.println("Heap   Sorting:---" + Arrays.toString(nums));
     }
 
     private static void buildMaxHeap(int[] nums) {

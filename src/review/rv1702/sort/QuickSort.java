@@ -1,38 +1,32 @@
-package exercise._0821_;
-
-import factory.NumFactory;
+package review.rv1702.sort;
 
 import java.util.Arrays;
 
 /**
- * Created by pokerface_lx on 16/8/21.
+ * Created by Poker on 2017/2/14.
  */
-public class QuickSort {
+public class QuickSort extends Sorting {
 
-    public static void main(String[] args) {
-        sort(NumFactory.getPNDistinctRandNums(20, 100));
+    @Override
+    public void sort(int[] nums) {
+        sort(nums, 0, nums.length-1);
     }
 
-    public static void sort(int[] nums) {
-        sort(nums, 0, nums.length - 1);
-        System.out.println(Arrays.toString(nums));
-    }
-
-    private static void sort(int[] nums, int startIndex, int endIndex) {
+    private void sort(int[] nums, int startIndex, int endIndex) {
         if (startIndex >= endIndex) {
             return;
         }
         int midIndex = partition(nums, startIndex, endIndex);
-        sort(nums, startIndex, midIndex-1);
+        sort(nums, startIndex, midIndex - 1);
         sort(nums, midIndex + 1, endIndex);
     }
 
-    private static int partition(int[] nums, int startIndex, int endIndex) {
+    private int partition(int[] nums, int startIndex, int endIndex) {
         int lowIndex = startIndex;
         int highIndex = endIndex;
         int temp = nums[lowIndex];
         while (lowIndex < highIndex) {
-            while (lowIndex < highIndex && nums[highIndex] >= temp) {
+            while (lowIndex < highIndex && nums[highIndex] > temp) {
                 highIndex--;
             }
             nums[lowIndex] = nums[highIndex];
@@ -44,5 +38,4 @@ public class QuickSort {
         nums[lowIndex] = temp;
         return lowIndex;
     }
-
 }

@@ -1,8 +1,7 @@
 package exercise._0817_;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
-import java.net.SocketTimeoutException;
 import java.util.Arrays;
 
 /**
@@ -43,7 +42,7 @@ public class QuickSort {
     }
 
     public static void main(String[] args) {
-        QuickSort.sort(NumsFactory.getDistinctRandNums(10, 100));
+        QuickSort.sort(NumFactory.getDistinctRandNums(10, 100));
     }
 
 }

@@ -1,8 +1,7 @@
 package exercise._0916_;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
-import java.awt.event.HierarchyBoundsAdapter;
 import java.util.Arrays;
 
 /**
@@ -11,7 +10,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] nums = NumsFactory.getDistinctRandNums(20, 100);
+        int[] nums = NumFactory.getDistinctRandNums(20, 100);
         sort(nums);
     }
 

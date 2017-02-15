@@ -1,8 +1,7 @@
 package exercise._1013_;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
-import java.awt.event.MouseWheelListener;
 import java.util.Arrays;
 
 /**
@@ -11,7 +10,7 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] nums = NumsFactory.getDistinctRandNums(10, 20);
+        int[] nums = NumFactory.getDistinctRandNums(10, 20);
         sort(nums);
     }
 

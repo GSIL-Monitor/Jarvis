@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by pokerface_lx on 16/6/20.
  */
-public class NumsFactory {
+public class NumFactory {
 
     private final static int DEFAULT_max = 99;
 

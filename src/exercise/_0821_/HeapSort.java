@@ -1,9 +1,8 @@
 package exercise._0821_;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * Created by pokerface_lx on 16/8/21.
@@ -11,7 +10,7 @@ import java.util.Collections;
 public class HeapSort {
 
     public static void main(String[] args) {
-        int[] nums  = NumsFactory.getPNDistinctRandNums(20, 100);
+        int[] nums  = NumFactory.getPNDistinctRandNums(20, 100);
         System.out.println(Arrays.toString(nums));
         HeapSort.sort(nums);
         System.out.println(Arrays.toString(nums));

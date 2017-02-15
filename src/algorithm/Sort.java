@@ -1,6 +1,6 @@
 package algorithm;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
 
@@ -118,9 +118,9 @@ public class Sort {
 
     public static void main(String[] args) {
         Sort sort = new Sort();
-        sort.bubbleSort(NumsFactory.getRandomNums(10));
-        sort.selectSort(NumsFactory.getRandomNums(10));
-        sort.insertSort(NumsFactory.getRandomNums(10));
+        sort.bubbleSort(NumFactory.getRandomNums(10));
+        sort.selectSort(NumFactory.getRandomNums(10));
+        sort.insertSort(NumFactory.getRandomNums(10));
     }
 
 }

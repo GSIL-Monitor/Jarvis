@@ -1,7 +1,5 @@
 package leetcode;
 
-import factory.NumsFactory;
-
 /**
  * Created by Poker on 2016/11/11.
  */

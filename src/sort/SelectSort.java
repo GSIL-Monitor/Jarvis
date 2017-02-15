@@ -17,7 +17,7 @@ public class SelectSort {
             }
             Sort.swap(nums, i, minIndx);
         }
-        System.out.println("Select Sort:---" + Arrays.toString(nums));
+        System.out.println("Select Sorting:---" + Arrays.toString(nums));
     }
 
 }

@@ -22,7 +22,7 @@ public class ShellSort {
             }
             space /= 3;
         }
-        System.out.println("Shell  Sort:---" + Arrays.toString(nums));
+        System.out.println("Shell  Sorting:---" + Arrays.toString(nums));
     }
 
 }

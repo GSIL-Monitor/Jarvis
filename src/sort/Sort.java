@@ -1,6 +1,6 @@
 package sort;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
 
@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class Sort {
 
     public static void main(String[] args) {
-        int[] nums = NumsFactory.getDistinctRandNums(30, 100);
+        int[] nums = NumFactory.getDistinctRandNums(30, 100);
         System.out.println("Origin Numbers:" + Arrays.toString(nums));
         BubbleSort.sort(nums.clone());
         QuickSort.sort(nums.clone());

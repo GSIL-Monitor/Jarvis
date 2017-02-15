@@ -32,7 +32,7 @@ public class RadixSort {
                 }
             }
         }
-        System.out.println("Radix  Sort:---" + Arrays.toString(nums));
+        System.out.println("Radix  Sorting:---" + Arrays.toString(nums));
     }
 
 }

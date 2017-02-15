@@ -1,6 +1,6 @@
 package algorithm;
 
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
 
@@ -12,7 +12,7 @@ import java.util.Arrays;
 public class MaxSumSequence {
 
     public static void main(String[] args) {
-        int[] nums = NumsFactory.getPNDistinctRandNums(10, 10);
+        int[] nums = NumFactory.getPNDistinctRandNums(10, 10);
         System.out.println(Arrays.toString(nums));
         get(nums);
     }

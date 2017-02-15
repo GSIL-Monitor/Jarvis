@@ -1,7 +1,6 @@
 package exercise._0907_;
 
-import com.sun.deploy.cache.CacheEntry;
-import factory.NumsFactory;
+import factory.NumFactory;
 
 import java.util.Arrays;
 
@@ -11,7 +10,7 @@ import java.util.Arrays;
 public class QuickSort {
 
     public static void main(String[] args) {
-        int[] nums = NumsFactory.getDistinctRandNums(20, 100);
+        int[] nums = NumFactory.getDistinctRandNums(20, 100);
         System.out.println(Arrays.toString(nums));
         sort(nums);
     }

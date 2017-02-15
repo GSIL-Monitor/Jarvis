@@ -1,9 +1,6 @@
 package algorithm;
 
-import factory.NumsFactory;
-
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * 最长递增子序列问题

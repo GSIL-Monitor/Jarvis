@@ -15,7 +15,7 @@ public class InsertSort {
                 }
             }
         }
-        System.out.println("Insert Sort:---" + Arrays.toString(nums));
+        System.out.println("Insert Sorting:---" + Arrays.toString(nums));
     }
 
 }
