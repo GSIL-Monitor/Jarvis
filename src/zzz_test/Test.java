@@ -10,17 +10,21 @@ import java.util.Scanner;
 public class Test {
     public static void main(String[] args) {
 
-        NutritionFacts2 cocaCola = new NutritionFacts2.Builder(240, 0).calories(100).fat(150).build();
+        System.out.println(new Test().maxArea(new int[]{2,1,2}));
+    }
 
-        while (true) {
-            System.out.println("请输入一大于1的自然数");
-            Scanner scanner = new Scanner(System.in);
-            String string = scanner.nextLine();
-            int k = Integer.parseInt(string);
-            if (k > 1) {
-                System.out.println(k + "尾相等数最小和为：" + findNumber(k));
-            } else System.out.println("你输入的数不合法，请重新输入");
+    public int maxArea(int[] height) {
+        int len = height.length, low = 0, high = len -1 ;
+        int maxArea = 0;
+        while (low < high) {
+            maxArea = Math.max(maxArea, (high - low) * Math.min(height[low], height[high]));
+            if (height[low] < height[high]) {
+                low++;
+            } else {
+                high--;
+            }
         }
+        return maxArea;
     }
 
     public static int findNumber(int k) {
