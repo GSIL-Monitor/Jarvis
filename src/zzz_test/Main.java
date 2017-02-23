@@ -12,52 +12,26 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class Main {
 
     public static void main(String[] args) {
-        final Data data = new Data();
-        for (int i = 0; i < 3; i++) {
-            new Thread(new Runnable() {
-                public void run() {
-                    for (int j = 0; j < 5; j++) {
-                        data.setData(new Random().nextInt(10));
-                    }
-                }
-            }).start();
-        }
-        for (int i = 0; i < 3; i++) {
-            new Thread(new Runnable() {
-                public void run() {
-                    for (int j = 0; j < 5; j++) {
-                        data.getData();
-                    }
-                }
-            }).start();
-        }
+
+        MathOperation addition = (int a, int b) -> a + b;
+        MathOperation subtraction = (a, b) -> a - b;
+        MathOperation multiplication = (int a, int b) -> {return a * b;};
+        MathOperation division = (a, b) -> a / b;
+
+        System.out.println("10+5="+operate(10, 5, addition));
+        System.out.println("10-5="+operate(10, 5, subtraction));
+        System.out.println("10*5="+operate(10, 5, multiplication));
+        System.out.println("10/5="+operate(10, 5, division));
+
+
     }
 
-    private static class Data{
-        private int data;
-        private ReadWriteLock lock = new ReentrantReadWriteLock();
+    private static int operate(int a, int b, MathOperation operation) {
+        return operation.operation(a, b);
+    }
 
-        public void setData(int data) {
-            lock.writeLock().lock();
-            try {
-                System.out.println(Thread.currentThread().getName() + "准备写入数据");
-                this.data = data;
-                System.out.println(Thread.currentThread().getName() + "写入" + this.data);
-            } finally {
-                lock.writeLock().unlock();
-            }
-        }
-
-        public void getData() {
-            lock.readLock().lock();
-            try {
-                System.out.println(Thread.currentThread().getName() + "准备读取数据");
-                System.out.println(Thread.currentThread().getName() + "读取" + this.data);
-            }finally {
-                lock.readLock().unlock();
-            }
-        }
-
+    private interface MathOperation {
+        int operation(int a, int b);
     }
 
 }
