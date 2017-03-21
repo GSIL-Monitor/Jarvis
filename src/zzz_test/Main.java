@@ -13,6 +13,12 @@ public class Main {
 
     public static void main(String[] args) {
 
+        String s = null;
+        switch (s) {
+
+        }
+
+
         MathOperation addition = (int a, int b) -> a + b;
         MathOperation subtraction = (a, b) -> a - b;
         MathOperation multiplication = (int a, int b) -> {return a * b;};

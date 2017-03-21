@@ -19,7 +19,10 @@ public class _15_3Sum {
             }
             System.out.println();
         }
+
     }
+
+
 
     public List<List<Integer>> threeSum(int[] nums) {
         quick_sort(nums, 0, nums.length - 1);
