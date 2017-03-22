@@ -11,8 +11,10 @@ public class NumFactory {
 
     public static int[] getRandomNums(int size) {
         int[] nums = new int[size];
+        Random random = new Random();
         for (int i = 0; i < size; i++) {
-            nums[i] = (int) (Math.random() * DEFAULT_max) + 1;
+//            nums[i] = (int) (Math.random() * DEFAULT_max) + 1;
+            nums[i] = random.nextInt(size)+1;
         }
         return nums;
     }
