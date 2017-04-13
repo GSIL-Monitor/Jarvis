@@ -1240,7 +1240,7 @@ public class Notepad extends JFrame implements ActionListener,DocumentListener
         else if(e.getSource()==editMenu_TimeDate)
         {   editArea.requestFocus();
             //SimpleDateFormat currentDateTime=new SimpleDateFormat("HH:mmyyyy-MM-dd");
-            //editArea.insert(currentDateTime.format(new Date()),editArea.getCaretPosition());
+            //editArea.add(currentDateTime.format(new Date()),editArea.getCaretPosition());
             Calendar rightNow=Calendar.getInstance();
             Date date=rightNow.getTime();
             editArea.insert(date.toString(),editArea.getCaretPosition());
