@@ -8,6 +8,25 @@ import java.util.List;
  */
 public class Hello {
 
+	public static void main(String[] args) {
+//		String s = "a aaaa b b bb ";
+//		System.out.println(s.substring(0, s.indexOf(' ')));
+//		s = s.substring(s.indexOf(' ')+1);
+//		System.out.println(s.substring(0, s.indexOf(' ')));
+//		s = s.substring(s.indexOf(' ')+1);
+//		System.out.println(s);
+		Scanner scan = new Scanner(System.in);
+		while (scan.hasNextLine()) {
+			System.out.println(scan.next());
+			System.out.println(scan.next());
+			System.out.println(scan.nextLine().trim());
+//			String content = scan.nextLine();
+//			content = content.substring(content.indexOf(' ')+1);
+//			System.out.println(content);
+
+		}
+	}
+
 
 
 	public boolean isRightTriangle(int a, int b, int c) {
@@ -21,11 +40,11 @@ public class Hello {
 		return Math.pow(max, 2) - Math.pow(mid, 2) - Math.pow(min, 2) == 0;
 	}
 
-
-	public static void main(String[] args) {
-		new Hello().isRightTriangle(5, 3, 4);
-
-	}
+//
+//	public static void main(String[] args) {
+//		new Hello().isRightTriangle(5, 3, 4);
+//
+//	}
 
 	/**
 	 * @param orders    工单id列表

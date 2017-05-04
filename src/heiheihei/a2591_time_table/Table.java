@@ -26,16 +26,16 @@ public class Table extends JFrame {
     private static final int TABLE_HEIGHT = CELL_HEIGHT * 16;
 
     public Table() throws Exception {
-        this.setSize(600, 600);
-        this.setTitle("Time Table");
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        this.setLocationRelativeTo(null);
-        this.setResizable(false);
-        this.setLayout(null);
-        UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
-        initField();
-        initLayout();
-        this.setVisible(true);
+            this.setSize(600, 600);
+            this.setTitle("Time Table");
+            this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            this.setLocationRelativeTo(null);
+            this.setResizable(false);
+            this.setLayout(null);
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+            initField();
+            initLayout();
+            this.setVisible(true);
     }
 
     private void initField() {
