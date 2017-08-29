@@ -1,2 +1,0 @@
-State  Population  Child Population  Child Poverity Population  % Child Poverity
------  ----------  ----------------  -------------------------  ----------------

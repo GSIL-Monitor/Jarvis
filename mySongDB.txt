@@ -1,3 +1,0 @@
-Song{itemCode=WH001, description=Wo Hai Pa, artist=Joker Xue, album=None, price=0.0}
-Song{itemCode=QT001, description=Qing Tian, artist=Jay Chou, album=YeHuiMei, price=10.0}
-Song{itemCode=BTO12, description=Yellow Submarine, artist=The Beatles, album=Beatles Greatest Hits, price=1.99}

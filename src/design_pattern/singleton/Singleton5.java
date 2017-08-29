@@ -1,7 +1,5 @@
 package design_pattern.singleton;
 
-import sort.InsertSort;
-
 /**
  * Created by pokerface_lx on 16/9/22.
  */
