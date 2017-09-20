@@ -29,6 +29,21 @@ public class SortActivity {
 		this.mNumSize = numSize;
 	}
 
+	public void doSort(Class clazz) {
+		Object algorithm = null;
+		try {
+			algorithm = clazz.newInstance();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		}
+		if (algorithm == null || !(algorithm instanceof SortAlgorithm)) {
+			return;
+		}
+		doSort((SortAlgorithm) algorithm);
+	}
+
 	public void doSort(SortAlgorithm sortAlgorithm) {
 		this.mSortAlgorithm = sortAlgorithm;
 		this.mNums = NumFactory.getRandomNums(mNumSize);
@@ -51,7 +66,7 @@ public class SortActivity {
 	}
 
 	/**
-	 * repeat sort $repeatTime$ times, in order to let the time count be obvious
+	 * repeat sort $repeatTime$ times, in order to let the time count be more obvious
 	 */
 	private void onRepeatSort() {
 		for (int i = 0; i < mRepeatTime; i++) {

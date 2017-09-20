@@ -7,13 +7,13 @@ import java.util.*;
  */
 public class NumFactory {
 
-    private final static int DEFAULT_max = 99;
+    private final static int DEFAULT_MAX = 99;
 
     public static int[] getRandomNums(int size) {
         int[] nums = new int[size];
         Random random = new Random();
         for (int i = 0; i < size; i++) {
-//            nums[i] = (int) (Math.random() * DEFAULT_max) + 1;
+//            nums[i] = (int) (Math.random() * DEFAULT_MAX) + 1;
             nums[i] = random.nextInt(size)+1;
         }
         return nums;
@@ -28,16 +28,16 @@ public class NumFactory {
     }
 
     public static int[] getDistinctRandNums(int size) {
-        if (size > DEFAULT_max) {
+        if (size > DEFAULT_MAX) {
             throw new RuntimeException("ur size is larger than default size");
         }
         int[] nums = new int[size];
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < DEFAULT_max; i++) {
+        for (int i = 0; i < DEFAULT_MAX; i++) {
             list.add(i);
         }
         for (int i = 0; i < size; i++) {
-            int index = (int) (Math.random() * (DEFAULT_max - i));
+            int index = (int) (Math.random() * (DEFAULT_MAX - i));
             nums[i] = list.get(index) + 1;
             list.remove(index);
         }

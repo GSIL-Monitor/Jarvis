@@ -10,16 +10,17 @@ import algorithm.sort.base.SortActivity;
  */
 public class Sorting {
 
-	public static void main(String[] args) {
-		SortActivity sortActivity = new SortActivity();
-		sortActivity.doSort(new BubbleSort());
-		sortActivity.doSort(new SelectSort());
-		sortActivity.doSort(new InsertSort());
-		sortActivity.doSort(new ShellSort());
-		sortActivity.doSort(new QuickSort());
-		sortActivity.doSort(new MergeSort());
-		sortActivity.doSort(new HeapSort());
-		sortActivity.doSort(new RadixSort());
-	}
+    public static void main(String[] args) {
+        //默认数组长度为50，可以通过传入int的方式自定义数组大小
+        SortActivity sortActivity = new SortActivity();
+        sortActivity.doSort(BubbleSort.class);
+        sortActivity.doSort(SelectSort.class);
+        sortActivity.doSort(InsertSort.class);
+        sortActivity.doSort(ShellSort.class);
+        sortActivity.doSort(QuickSort.class);
+        sortActivity.doSort(MergeSort.class);
+        sortActivity.doSort(HeapSort.class);
+        sortActivity.doSort(RadixSort.class);
+    }
 
 }
