@@ -1,7 +1,5 @@
 package binary_tree;
 
-import java.util.LinkedList;
-
 /**
  * Created by pokerface_lx on 16/9/8.
  */
@@ -12,6 +10,9 @@ public class MorrisTravel {
         MorrisTravel.preOrderTravel();
     }
 
+    /**
+     * 先序遍历实现
+     */
     public static void inOrderTravel() {
         Node currNode = Node.getDefaultTree();
         Node prevNode = null;
@@ -38,6 +39,10 @@ public class MorrisTravel {
         System.out.println();
     }
 
+
+    /**
+     * 中序遍历实现
+     */
     public static void preOrderTravel() {
         Node currNode = Node.getDefaultTree();
         Node prevNode = null;

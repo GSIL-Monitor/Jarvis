@@ -10,22 +10,7 @@ import java.io.*;
 public class FileUtil {
 
 	public static String readFromFile(String path) {
-		File file = new File(path);
-		if (!file.exists()) {
-			throw new RuntimeException("No such file.");
-		}
-		StringBuilder sb = new StringBuilder();
-		try {
-			BufferedReader reader = new BufferedReader(new FileReader(file));
-			String s = null;
-			while ((s = reader.readLine()) != null) {
-				sb.append(s);
-			}
-			reader.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		return sb.toString();
+		return readFromFile(new File(path));
 	}
 
 	public static String readFromFile(File file) {
@@ -47,14 +32,7 @@ public class FileUtil {
 	}
 
 	public static void writeToFile(String path, String content) {
-		File file = new File(path);
-		try {
-			FileWriter writer = new FileWriter(file);
-			writer.write(content);
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		writeToFile(new File(path), content);
 	}
 
 	public static void writeToFile(File file, String content) {
