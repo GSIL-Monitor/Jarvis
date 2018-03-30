@@ -1,4 +1,4 @@
-package ztest;
+package z_test;
 
 /**
  * Created by liushaox on 16/8/10.

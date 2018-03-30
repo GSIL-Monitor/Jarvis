@@ -1,4 +1,4 @@
-package ztest;
+package z_test;
 
 import heiheihei.a45323_huffman.MyBinaryHeap;
 
@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by ztest.Poker on 2016/11/20.
+ * Created by z_test.Poker on 2016/11/20.
  */
 public class Test{
     public static void main(String[] args) throws Exception{

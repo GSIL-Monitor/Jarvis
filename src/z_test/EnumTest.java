@@ -1,7 +1,7 @@
-package ztest;
+package z_test;
 
 /**
- * Created by ztest.Poker on 2016/11/30.
+ * Created by z_test.Poker on 2016/11/30.
  */
 public enum EnumTest {
     ADD, MUL, POW;

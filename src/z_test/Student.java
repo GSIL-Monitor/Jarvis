@@ -1,4 +1,4 @@
-package ztest;
+package z_test;
 
 /**
  * Author: liuxiao

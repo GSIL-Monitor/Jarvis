@@ -1,9 +1,9 @@
-package ztest;
+package z_test;
 
 import java.util.*;
 
 /**
- * Created by ztest.Poker on 2016/12/2.,
+ * Created by z_test.Poker on 2016/12/2.,
  */
 public class Hello {
 

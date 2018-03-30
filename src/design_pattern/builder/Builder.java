@@ -1,7 +1,5 @@
 package design_pattern.builder;
 
-import design_pattern.observer.Observed;
-
 /**
  * Created by pokerface_lx on 16/9/8.
  */

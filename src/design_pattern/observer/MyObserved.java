@@ -6,28 +6,28 @@ import java.util.List;
 /**
  * Created by pokerface_lx on 16/9/8.
  */
-public class MyObserved implements Observed {
+public class MyObserved implements IObserved {
 
-    private List<Observer> observerList;
+    private List<IWatcher> watcherList;
 
     public MyObserved() {
-        observerList = new ArrayList<>();
+        watcherList = new ArrayList<>();
     }
 
     @Override
     public void notifyObserver(String str) {
-        for (Observer o: observerList) {
+        for (IWatcher o: watcherList) {
             o.update(str);
         }
     }
 
     @Override
-    public void removeObserver(Observer o) {
-        observerList.remove(o);
+    public void removeObserver(IWatcher o) {
+        watcherList.remove(o);
     }
 
     @Override
-    public void addObserver(Observer o) {
-        observerList.add(o);
+    public void addObserver(IWatcher o) {
+        watcherList.add(o);
     }
 }

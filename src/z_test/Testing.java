@@ -1,4 +1,4 @@
-package ztest;
+package z_test;
 
 /**
  * Created by Poker on 2017/2/20.
