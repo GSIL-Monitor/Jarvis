@@ -1,4 +1,4 @@
-package neuqoj;
+package neuqoj.oldoj;
 
 import java.util.ArrayList;
 import java.util.List;

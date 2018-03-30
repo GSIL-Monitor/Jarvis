@@ -1,7 +1,6 @@
 package ztest;
 
 import java.util.*;
-import java.util.List;
 
 /**
  * Created by ztest.Poker on 2016/12/2.,
@@ -9,25 +8,17 @@ import java.util.List;
 public class Hello {
 
 	public static void main(String[] args) {
-//		String s = "a aaaa b b bb ";
-//		System.out.println(s.substring(0, s.indexOf(' ')));
-//		s = s.substring(s.indexOf(' ')+1);
-//		System.out.println(s.substring(0, s.indexOf(' ')));
-//		s = s.substring(s.indexOf(' ')+1);
-//		System.out.println(s);
-		Scanner scan = new Scanner(System.in);
-		while (scan.hasNextLine()) {
-			System.out.println(scan.next());
-			System.out.println(scan.next());
-			System.out.println(scan.nextLine().trim());
-//			String content = scan.nextLine();
-//			content = content.substring(content.indexOf(' ')+1);
-//			System.out.println(content);
-
-		}
+		System.out.println(String.format("11%s11", null));
 	}
 
-
+	private static  void removeI(List<String> list, int targetIndex) {
+		if (list.size() > targetIndex) {
+			list.add(targetIndex,"test");
+			list.remove(list.size() - 1);
+		} else {
+			list.add(list.size(), "test");
+		}
+	}
 
 	public boolean isRightTriangle(int a, int b, int c) {
 		int max = a;

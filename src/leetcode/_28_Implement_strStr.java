@@ -1,28 +1,24 @@
-package algorithm.about_string;
-
-import java.util.Arrays;
-import java.util.Scanner;
+package leetcode;
 
 /**
  * Author: liuxiao
- * Created: 2017/12/1 17:39
- * Description: 字符串匹配算法
+ * Created: 2018/1/30 16:50
+ * Description: KMP
  */
-public class KMP {
+public class _28_Implement_strStr {
 
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        while (scan.hasNext()) {
-            String haystack = scan.next();
-            String needle = scan.next();
-            doFind(haystack, needle);
-        }
+    public static void main(String[] args) {// FIXME: 2018/1/30 结果错误
+        System.out.println(new _28_Implement_strStr().strStr("aabaaabaaac", "aabaaac"));
     }
 
-    public static void doFind(String source, String pattern) {
-        System.out.println("pattern: " + Arrays.toString(pattern.toCharArray()));
-        System.out.println("next:    " + Arrays.toString(getNext(pattern.toCharArray())));
-        System.out.println("index: " + find(source.toCharArray(), pattern.toCharArray()));
+    public int strStr(String haystack, String needle) {
+        if (haystack == null || needle == null) {
+            return -1;
+        }
+        if (needle.equals("")) {
+            return 0;
+        }
+        return find(haystack.toCharArray(), needle.toCharArray());
     }
 
     public static int find(char[] source, char[] pattern) {
