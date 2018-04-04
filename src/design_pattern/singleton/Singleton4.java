@@ -1,19 +1,28 @@
 package design_pattern.singleton;
 
 /**
- * Created by pokerface_lx on 16/9/22.
+ * Description: 双检锁/双重校验锁（DCL double checked locking）、线程安全、lazy初始化
+ * 这种方式采用双锁机制，安全且在多线程情况下能保持高性能
+ * getInstance()的性能对应用程序很关键
+ * <p>
+ * Author: liuxiao
+ * Date: 2018/4/4
  */
 public class Singleton4 {
 
-    private static Singleton4 instance = null;
+    private volatile static Singleton4 instance;
 
     private Singleton4() {
 
     }
 
-    public static synchronized Singleton4 getInstance() {
+    public static Singleton4 getInstance() {
         if (instance == null) {
-            instance = new Singleton4();
+            synchronized (Singleton4.class) {
+                if (instance == null) {
+                    instance = new Singleton4();
+                }
+            }
         }
         return instance;
     }

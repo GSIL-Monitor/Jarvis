@@ -8,7 +8,10 @@ import java.util.*;
 public class Hello {
 
 	public static void main(String[] args) {
-		System.out.println(String.format("11%s11", null));
+		String s = "push_";
+		String a = "push_12341234";
+		System.out.println(a.startsWith(s));
+		System.out.println(a.substring(s.length()));
 	}
 
 	private static  void removeI(List<String> list, int targetIndex) {
