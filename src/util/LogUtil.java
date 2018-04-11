@@ -11,4 +11,9 @@ public class LogUtil {
         System.out.println(tag + ": " + content);
     }
 
+    public static void log(String tag, Exception e) {
+        log(tag, e.getMessage());
+        e.printStackTrace();
+    }
+
 }
