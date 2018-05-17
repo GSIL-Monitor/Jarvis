@@ -22,7 +22,7 @@ public class FileUtil {
 			BufferedReader reader = new BufferedReader(new FileReader(file));
 			String s = null;
 			while ((s = reader.readLine()) != null) {
-				sb.append(s);
+				sb.append(s).append('\n');
 			}
 			reader.close();
 		} catch (IOException e) {

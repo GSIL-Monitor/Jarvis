@@ -43,5 +43,30 @@ public class PrintUtil {
         printDivision();
     }
 
+    public static void print(int length, String str) {
+        String template = "%-" + length + "s";
+        print(String.format(template, str));
+    }
+
+    public static void print(int length, Object... args) {
+        StringBuilder sb = new StringBuilder();
+        for (Object o : args) {
+            sb.append(String.valueOf(o));
+        }
+        print(length, sb.toString());
+    }
+
+    public static void println(int length, String str) {
+        String template = "%-" + length + "s";
+        println(String.format(template, str));
+    }
+
+    public static void println(int length, Object... args) {
+        StringBuilder sb = new StringBuilder();
+        for (Object o : args) {
+            sb.append(String.valueOf(o));
+        }
+        println(length, sb.toString());
+    }
 
 }
