@@ -29,7 +29,7 @@ public class JsonUtil {
 
     public static <T> T fromJson(Gson gson, String json, Class<T> clazz) {
         try {
-            fromJsonUnsafe(gson, json, clazz);
+            return fromJsonUnsafe(gson, json, clazz);
         } catch (Exception e) {
             LogUtil.log(TAG, e);
         }
@@ -42,7 +42,7 @@ public class JsonUtil {
 
     public static <T> T fromJson(Gson gson, String json, TypeToken<T> typeToken) {
         try {
-            fromJsonUnsafe(gson, json, typeToken);
+            return fromJsonUnsafe(gson, json, typeToken);
         } catch (Exception e) {
             LogUtil.log(TAG, e);
         }
