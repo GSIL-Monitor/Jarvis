@@ -1,6 +1,5 @@
-package neuqoj.oldoj;
+package oj.neuqoj.oldoj;
 
-import javax.xml.stream.XMLOutputFactory;
 import java.util.Scanner;
 
 /**

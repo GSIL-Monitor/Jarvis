@@ -1,4 +1,4 @@
-package neuqoj.newoj;
+package oj.neuqoj.newoj;
 
 import java.util.Scanner;
 

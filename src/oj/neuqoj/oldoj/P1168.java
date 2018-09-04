@@ -1,4 +1,4 @@
-package neuqoj.oldoj;
+package oj.neuqoj.oldoj;
 
 import java.util.LinkedList;
 import java.util.List;

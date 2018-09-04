@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
 #若没有brew环境，安装brew
-if which brew > /dev/null ; then
-    echo "brew has been installed."
-else
-    echo "brew not installed, install brew first."
+if ! which brew > /dev/null ; then
+    echo "Brew not installed, install brew first..."
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
 #若没有qrencode库，安装qrencode
-if which qrencode > /dev/null ; then
-    echo "qrencode has been installed."
-else
-    echo "qrencode not installed, install brew first"
+if ! which qrencode > /dev/null ; then
+    echo "QREncode not installed, install QREncode first..."
     brew install qrencode
 fi
 
