@@ -1,6 +1,8 @@
 package util;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,6 +22,25 @@ public class PrintUtil {
 
     public static void printArray(int[] arr) {
         System.out.println(Arrays.toString(arr));
+    }
+
+    public static void printCollection(Collection collection) {
+        for (Object o : collection) {
+            System.out.println(o.toString());
+        }
+    }
+
+    public static void printList(List list) {
+        print("list:[");
+        int index = 0;
+        for (Object o : list) {
+            if (index++ == 0) {
+                print(o.toString());
+            } else {
+                print(", " + o.toString());
+            }
+        }
+        println("]");
     }
 
     public static void printBlankLine() {

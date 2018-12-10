@@ -9,6 +9,20 @@ import java.io.*;
  */
 public class FileUtil {
 
+	public static BufferedReader getFileReader(String path) {
+		return getFileReader(new File(path));
+	}
+
+	public static BufferedReader getFileReader(File file) {
+		BufferedReader reader = null;
+		try {
+			reader = new BufferedReader(new FileReader(file));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return reader;
+	}
+
 	public static String readFromFile(String path) {
 		return readFromFile(new File(path));
 	}

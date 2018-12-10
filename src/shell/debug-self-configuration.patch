@@ -1,0 +1,84 @@
+From 98febd2b93862e82111cbb7f866c61b3d1b3e213 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?=E5=88=98=E9=AA=81?= <bjliuxiao3@corp.netease.com>
+Date: Thu, 13 Sep 2018 10:09:28 +0800
+Subject: [PATCH] [add][debug] self-configuration
+
+---
+ news/src/main/AndroidManifest.xml                                | 1 +
+ news/src/main/java/com/netease/thirdsdk/SDKManager.java          | 2 +-
+ .../main/java/com/netease/thirdsdk/sentry/SentrySendService.java | 2 +-
+ news/src/main/res/xml/network_security_config.xml                | 9 +++++++++
+ .../com/netease/newsreader/common/newsconfig/ConfigDebug.java    | 2 +-
+ 5 files changed, 13 insertions(+), 3 deletions(-)
+ create mode 100644 news/src/main/res/xml/network_security_config.xml
+
+diff --git a/news/src/main/AndroidManifest.xml b/news/src/main/AndroidManifest.xml
+index 7a63a18..dbd0428 100644
+--- a/news/src/main/AndroidManifest.xml
++++ b/news/src/main/AndroidManifest.xml
+@@ -172,6 +172,7 @@
+         android:name="com.netease.nr.base.activity.BaseApplication"
+         android:icon="@drawable/icon"
+         android:label="@string/app_name"
++        android:networkSecurityConfig="@xml/network_security_config"
+         android:largeHeap="true"
+         android:resizeableActivity="false"
+         android:theme="@style/ApplicationTheme"
+diff --git a/news/src/main/java/com/netease/thirdsdk/SDKManager.java b/news/src/main/java/com/netease/thirdsdk/SDKManager.java
+index 96fead0..4489546 100644
+--- a/news/src/main/java/com/netease/thirdsdk/SDKManager.java
++++ b/news/src/main/java/com/netease/thirdsdk/SDKManager.java
+@@ -86,7 +86,7 @@ public class SDKManager {
+     /**
+      * Fabric 崩溃收集系统开关
+      */
+-    public static boolean FABRIC_ENABLED = true;
++    public static boolean FABRIC_ENABLED = false;
+     /**
+      * 云音乐唤醒开关
+      */
+diff --git a/news/src/main/java/com/netease/thirdsdk/sentry/SentrySendService.java b/news/src/main/java/com/netease/thirdsdk/sentry/SentrySendService.java
+index 20b6938..60828d4 100644
+--- a/news/src/main/java/com/netease/thirdsdk/sentry/SentrySendService.java
++++ b/news/src/main/java/com/netease/thirdsdk/sentry/SentrySendService.java
+@@ -261,7 +261,7 @@ public class SentrySendService extends Service implements ChangeListenerManager.
+     }
+ 
+     private boolean memoryMonitSwitch() {
+-        return BuildConfig.DEBUG;
++        return false;
+     }
+ 
+ }
+diff --git a/news/src/main/res/xml/network_security_config.xml b/news/src/main/res/xml/network_security_config.xml
+new file mode 100644
+index 0000000..e1eb89e
+--- /dev/null
++++ b/news/src/main/res/xml/network_security_config.xml
+@@ -0,0 +1,9 @@
++<?xml version="1.0" encoding="utf-8"?>
++<network-security-config>
++    <debug-overrides>
++        <trust-anchors>
++            <!-- Trust user added CAs while debuggable only -->
++            <certificates src="user" />
++        </trust-anchors>
++    </debug-overrides>
++</network-security-config>
+\ No newline at end of file
+diff --git a/news_common_mutable/src/main/java/com/netease/newsreader/common/newsconfig/ConfigDebug.java b/news_common_mutable/src/main/java/com/netease/newsreader/common/newsconfig/ConfigDebug.java
+index 8fb5baf..2512eb8 100644
+--- a/news_common_mutable/src/main/java/com/netease/newsreader/common/newsconfig/ConfigDebug.java
++++ b/news_common_mutable/src/main/java/com/netease/newsreader/common/newsconfig/ConfigDebug.java
+@@ -62,7 +62,7 @@ public class ConfigDebug implements IPatchBean {
+     }
+ 
+     public static boolean getOpenLeakCanary(boolean defaultVale) {
+-        return debugConfig.getValue(KEY_OPEN_LEAK_CANARY, defaultVale);
++        return false && debugConfig.getValue(KEY_OPEN_LEAK_CANARY, defaultVale);
+     }
+ 
+     public static void setOpenBlockCanary(boolean value) {
+-- 
+2.10.1
+
